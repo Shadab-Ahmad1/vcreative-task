@@ -1,0 +1,65 @@
+.clientHeader {
+    padding: 0px 15px;
+    .HeaderComponent {
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      .UserAction{
+        display: flex;
+        align-items: center;
+        width: 16%;
+        justify-content: center;
+        .mesages{
+          img{
+            width: 20px;
+          }
+        }
+        .username{
+          padding: 3px;
+          background-color: #fff;
+          border-radius: 50%;
+          margin-left: 20px;
+          margin-top: -5px;
+          h4{
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+  
+  .main__header {
+    padding-top: 14px;
+    .header {
+      display: flex;
+      justify-content: space-around;
+      max-width: 70%;
+      padding: 12px 0;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 10px;
+      .header__blocks {
+        flex-basis: 18%;
+        padding: 0 20px;
+        border-right: 1px solid #eff0f6;
+      }
+      .actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 45px;
+        gap: 10px;
+        .actions__number {
+          h3 {
+            font-size: 24px;
+          }
+        }
+        .actions__icon {
+          padding: 6px;
+          border-radius: 6px;
+          box-shadow: 0 1px 5px 0 rgb(124 141 181 / 12%);
+        }
+      }
+    }
+  }
+  

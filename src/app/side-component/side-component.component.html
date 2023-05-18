@@ -1,0 +1,119 @@
+<div class="headerDropdown">
+    <div class="dropDown">
+      <select>
+        <option value="option1">Spots in Review</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+    </div>
+    <hr class="seperator" />
+    <div class="searchBox">
+      <input type="text" placeholder="Search" />
+      <div (click)="showDisplay()" [ngClass]="{'active': display}" class="filterIcon">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11 18.525a1.3 1.3 0 0 1-.937-.375 1.267 1.267 0 0 1-.387-.95c0-.367.129-.68.387-.938a1.28 1.28 0 0 1 .938-.387h2c.366 0 .68.129.938.387.258.258.387.57.387.938 0 .383-.13.7-.387.95a1.3 1.3 0 0 1-.938.375h-2zm-7 -10.4c-.366 0-.679-.13-.937-.388a1.276 1.276 0 0 1-.387-.937c0-.384.129-.7.387-.95A1.3 1.3 0 0 1 4 5.475h16c.366 0 .68.125.938.375.258.25.387.566.387.95 0 .366-.13.679-.387.937a1.278 1.278 0 0 1-.938.388H4zm3 5.2a1.28 1.28 0 0 1-.937-.387A1.28 1.28 0 0 1 5.676 12c0-.367.129-.68.387-.938A1.28 1.28 0 0 1 7 10.675h10c.366 0 .68.129.938.387.258.258.387.57.387.938 0 .366-.13.679-.387.938a1.28 1.28 0 0 1-.938.387H7z"
+            fill="#6F7A8A"
+          />
+        </svg>
+        
+      </div>
+    </div>
+    <div *ngIf="display" class="filterDetail">
+      <div class="filterDetailsInner">
+        <div class="filterTitle">
+          <p>Filters</p>
+        </div>
+        <div class="filterRow">
+          <div class="filterContainer">
+            <div class="filters">
+              <select name="" id="">
+                <option value="">Sort by</option>
+                <option value="">Sort by</option>
+                <option value="">Sort by</option>
+              </select>
+            </div>
+            <div class="filters">
+              <select name="" id="">
+                <option value="">Select Markets</option>
+                <option value="">Demo Broadcasting</option>
+                <option value="">Demo Telecasting</option>
+              </select>
+            </div>
+            <div class="filters">
+              <select name="" id="">
+                <option value="">Select Business</option>
+                <option value="">Select Business</option>
+                <option value="">Select Business</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="clear-all">Clear all</button>
+          <button class="apply">Apply</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mainCompleteTaskSection">
+    <div *ngFor="let items of data let i = index" [ngClass]="{'active': activeIndex === i }" (click)="activeIndex=i" class="CompleteTaskSection">
+      <div class="CompleteTaskList">
+        <div class="taskImage">
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 22 22"
+            fill="red"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m15.125 18.687-1.78-1.78-.97.969 2.75 2.75 5.5-5.5-.97-.97-4.53 4.53z"
+              fill="rgba(0, 0, 0, 0.55)"
+            />
+            <path
+              d="M17.188 3.438h-2.063V2.75a1.38 1.38 0 0 0-1.375-1.375h-5.5A1.38 1.38 0 0 0 6.875 2.75v.688H4.812a1.38 1.38 0 0 0-1.375 1.374V19.25a1.38 1.38 0 0 0 1.376 1.375H11V19.25H4.812V4.812h2.063v2.063h8.25V4.812h2.063v7.563h1.375V4.812a1.38 1.38 0 0 0-1.375-1.375zM13.75 5.5h-5.5V2.75h5.5V5.5z"
+              fill="rgba(0, 0, 0, 0.55)"
+            />
+          </svg>
+        </div>
+        <div id="parent-container" class="taskCompleteDetail">
+          <div class="taskHeading">
+            <h3>{{ items.title }}</h3>
+            <p class="taskDesc">{{ items.titleDesc }}</p>
+          </div>
+          <div class="taskActions">
+            <div class="taskActionColumns">
+              <div class="startDate">
+                <p>start date</p>
+                <h4>{{ items.startDate }}</h4>
+              </div>
+            </div>
+            <div class="taskActionColumns">
+              <div class="endDate">
+                <p>end date</p>
+                <h4>{{ items.endDate }}</h4>
+              </div>
+            </div>
+            <div class="taskActionColumns">
+              <div class="taskToken">
+                <p>ISCI</p>
+                <h4>{{ items.ISCI }}</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  

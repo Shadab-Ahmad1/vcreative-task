@@ -1,0 +1,190 @@
+.headerDropdown {
+    padding: 4.5px 14.5px 4.5px 13px;
+    .dropDown{
+      select {
+        padding: 8px;
+        font-size: 14px;
+        border: none;
+        border-radius: 1px;
+        outline: none;
+        padding-left: 0;
+      }
+    }
+    .seperator {
+      border: 0.5px solid #e4e5e7;
+    }
+    .searchBox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      input {
+        flex-basis: 84%;
+        height: 35px;
+        padding-left: 30px;
+        border-radius: 3px;
+        border: none;
+        font-size: 13px;
+        font-weight: 600;
+        outline: none;
+        background-color: #f0f2f5;
+        background-image: url("../../assets/images/Icon ionic-ios-search1.png");
+        background-repeat: no-repeat;
+        background-position: 2% 49%;
+        background-size: 13px;
+      }
+      .filterIcon{
+        padding: 5px 5px 0px 4px;
+        border-radius: 4px;
+        background-color: #fff;
+        cursor: pointer;
+      }
+      .filterIcon.active{
+        background-color:#6d9dfc;
+        path{
+          fill: #fff;
+        }
+      }
+    }
+    .filterDetail{
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 186px;
+      z-index: 2;
+      top: 95px;
+      background-color: #fff;
+      border-radius: 2px;
+      box-shadow: 0 1px 5px 0 rgb(82 95 113 / 15%);
+      border: solid 0.5px #ebebeb;
+      .filterDetailsInner{
+        padding: 5px 15px;
+        .filterRow{
+          width: 100%;
+          .filterContainer{
+            display: flex;
+            gap: 8px;
+            padding-bottom: 3.5rem;
+            .filters{
+              select{
+                padding: 10px 33px 10px 11px;
+                border-radius: 4px;
+                border: solid 0.5px #c4cbce;
+                outline: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                     appearance: none;
+                     background-image: url('../../assets/images/arrow-down.svg');
+                     background-repeat: no-repeat;
+                     background-position: 91% 55%;
+              }
+            }
+          }
+        }
+        .buttons{
+          text-align: right;
+          button{
+            width: 88px;
+            padding: 10px 0px 12px 0px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 7px;
+            background-color: rgba(96, 116, 157, 0.12);
+            outline: none;
+            color: #677185;
+            font-weight: 600;
+          }
+          .apply{
+            background-color:#5c93ff;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .mainCompleteTaskSection {
+    margin-top: 7px;
+  
+    .CompleteTaskSection {
+      padding: 14px;
+      border-bottom: 1px solid #e4e5e7;
+      cursor: pointer;
+      &.active {
+        background: #f0f5ff;
+        
+        .taskImage {
+          background-color: #6d9dfc;
+          path {
+            fill: #fff;
+          }
+        }
+        .taskDesc {
+          color: #508aff;
+          background-color: #dce8ff !important;
+        }
+      }
+      .CompleteTaskList {
+        display: flex;
+        gap: 10px;
+      }
+      .taskImage {
+        max-width: 100%;
+        border-radius: 50%;
+        height: 100%;
+        margin-left: 8px;
+        margin-top: 12px;
+        background-color: #ededed;
+        padding: 6px 8px;
+      }
+      .taskCompleteDetail {
+        flex-basis: 87%;
+        .taskHeading {
+          max-width: 80%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          h3 {
+            font-size: 14px;
+          }
+          .taskDesc {
+            padding: 4px 8px;
+            margin-top: 5px;
+            border-radius: 20px;
+            font-size: 11px;
+            background-color: #ededed;
+          }
+        }
+      }
+      .taskActions {
+        padding-top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      .taskActionColumns {
+        position: relative;
+        &:after {
+          content: "";
+          width: 1px;
+          height: 32px;
+          top: 8px;
+          background-color: rgba(0, 0, 0, 0.12);
+          position: absolute;
+          right: -15px;
+        }
+        &:nth-child(3) {
+            &:after {
+              width: 0px;
+              height: 0px;
+            }
+          }
+        p {
+          font-size: 13px;
+        }
+        h4 {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  
